@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const list = new SinglyLinkedList();
 
+    
+
     document.getElementById('add-node-btn').addEventListener('click', function() {
         const inputValue = document.getElementById('node-value').value;
         if (inputValue) {
@@ -43,5 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             alert('Please enter a valid value!');
         }
+    });
+
+    document.getElementById('remove-node-btn').addEventListener('click', function() {
+        const poppedNode = list.pop();
+        visualize(list);
     });
 });
