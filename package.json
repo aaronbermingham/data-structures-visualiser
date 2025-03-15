@@ -1,5 +1,5 @@
 {
-  "name": "data-structures-visualizer",
+  "name": "data-structures-visualiser",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
