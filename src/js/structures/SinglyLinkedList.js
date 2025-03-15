@@ -52,6 +52,10 @@ class SinglyLinkedList {
         var shiftedHead = this.head;
         this.head = shiftedHead.next;
         this.length --;
+        if(this.length === 0){
+            this.tail = null;
+            this.head = null;
+        }
         return shiftedHead;
     }
 }
