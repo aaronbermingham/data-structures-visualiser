@@ -51,4 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const poppedNode = list.pop();
         visualize(list);
     });
+
+    document.getElementById('shift-node-btn').addEventListener('click', function() {
+        const shiftedNode = list.shift();
+        visualize(list);
+    })
 });

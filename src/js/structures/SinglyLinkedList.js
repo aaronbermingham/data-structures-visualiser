@@ -25,14 +25,6 @@ class SinglyLinkedList {
         return this;
     }
 
-    traverse() {
-        var current = this.head;
-        while(current){
-            console.log(current.val);
-            current = current.next;
-        }
-    }
-
     pop() {
         if(!this.head){
             return undefined;
@@ -51,5 +43,15 @@ class SinglyLinkedList {
             this.head = null;
         }
         return current;
+    }
+
+    shift(){
+        if(!this.head){
+            return undefined
+        }
+        var shiftedHead = this.head;
+        this.head = shiftedHead.next;
+        this.length --;
+        return shiftedHead;
     }
 }
