@@ -49,11 +49,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('remove-node-btn').addEventListener('click', function() {
         const poppedNode = list.pop();
+        if(!poppedNode){
+            alert('List is empty!');
+        }
         visualize(list);
     });
 
     document.getElementById('shift-node-btn').addEventListener('click', function() {
         const shiftedNode = list.shift();
+        if(!shiftedNode){
+            alert('List is empty!');
+        }
         visualize(list);
     })
 });
