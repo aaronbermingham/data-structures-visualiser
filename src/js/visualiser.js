@@ -62,4 +62,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         visualize(list);
     })
+
+    document.getElementById('unshift-node-btn').addEventListener('click', function(){
+        const inputValue = document.getElementById('node-value').value;
+        if (inputValue) {
+            list.unshift(Number(inputValue));
+            document.getElementById('node-value').value = ''; 
+            visualize(list);
+        } else {
+            alert('Please enter a valid value!');
+        }
+    })
 });
