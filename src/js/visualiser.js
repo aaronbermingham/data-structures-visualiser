@@ -73,4 +73,15 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Please enter a valid value!');
         }
     })
+
+    document.getElementById('get-node-btn').addEventListener('click', function(){
+        const inputValue = document.getElementById('node-value').value;
+        if (inputValue) {
+            list.get(Number(inputValue));
+            document.getElementById('node-value').value = ''; 
+            visualize(list);
+        } else {
+            alert('Please enter a valid value to retrive!');
+        }
+    })
 });
