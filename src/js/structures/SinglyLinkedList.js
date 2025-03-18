@@ -60,7 +60,7 @@ class SinglyLinkedList {
     }
 
     unshift(val){
-        var node = new Node(val)
+        var node = new Node(val);
         if(!this.head){
             this.head = node;
             this.tail = this.head;
@@ -71,5 +71,19 @@ class SinglyLinkedList {
         }
         this.length ++
         return this;
+    }
+
+    get(index){
+        var count = 0;
+        var current = this.head;
+        if(index < 0 || index >= this.length){
+            return null;
+        }
+           while(count !== index){
+                current = current.next;
+                count ++;
+           }
+           console.log(current);
+           return current;
     }
 }
