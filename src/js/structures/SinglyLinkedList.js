@@ -58,4 +58,18 @@ class SinglyLinkedList {
         }
         return shiftedHead;
     }
+
+    unshift(val){
+        var node = new Node(val)
+        if(!this.head){
+           this.head = node;
+           this.tail = this.head;
+        }
+        else{
+           node.next = this.head;
+            this.head = node;
+        }
+        this.length ++
+        return this;
+    }
 }
